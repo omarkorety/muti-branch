@@ -1,8 +1,5 @@
 pipeline { 
     agent any 
-    options {
-        skipStagesAfterUnstable()
-    }
     stage('Print Branch name') {
         steps {
                     

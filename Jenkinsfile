@@ -3,15 +3,14 @@ pipeline {
     options {
         skipStagesAfterUnstable()
     }
-    stages {
-        stage('Build') { 
-          node {
-            echo 'Pulling...' + env.BRANCH_NAME
-            checkout scm
-        
-    }
+    stage('Print Branch name') {
+        steps {
+                    
+             echo "${env.GIT_BRANCH}"
+
+           }
         }
+    
         
     }
 }
-
